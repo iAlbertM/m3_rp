@@ -1,0 +1,20 @@
+<h1>Recipes#index</h1>
+<p>Find me in app/views/recipes/index.html.erb</p>
+<h2>Results</h2>
+<h3>Searched for: <%= @search %></h3>
+<table>
+	<tr>
+		<th>Image</th>
+		<th>Title</th>
+		<th>Description</th>
+		<th>Link</th>
+	</tr>
+	<% @recipes.each do |recipe| %>
+	<tr>
+		<td><%= link_to img_tag(recipe['thumbnail']), recipe['href']%>"</td>
+		<td><%= link_to recipe['title'], recipe['href']%>"</td>
+		<td><%= recipe['description']%>"</td>
+		<td><%= link_to "visit recipe website", recipe['href'] %></td>
+	</tr>
+	<% end %>
+</table>
