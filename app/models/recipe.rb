@@ -2,11 +2,10 @@ require "httparty"
 
 class Recipe
 	include HTTParty
-	base = "www.recipepuppy.com"
-	base_uri "http://#{base}/api"
+	base_uri "http://www.recipepuppy.com"
 	format :json
 
 	self.for(term)
-		get("", query: {q: term})["recipes"]
+		get("/api", query: {q: term})["recipes"]
 	end
 end
