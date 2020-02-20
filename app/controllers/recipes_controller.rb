@@ -1,6 +1,8 @@
+require "awesome_print"
+  
 class RecipesController < ApplicationController
   def index
-  	@search = params['search'] || 'chocolate'
-  	@recipes = Recipe.for @search
+    @search = "chocolate"
+    @recipes = Recipe.for(@search)
   end
 end

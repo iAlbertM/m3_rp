@@ -11,10 +11,10 @@
 	</tr>
 	<% @recipes.each do |recipe| %>
 	<tr>
-		<td><%= link_to img_tag(recipe["thumbnail"], width: 150, height:150), recipe["href"] %>"</td>
-		<td><%= link_to recipe["title"], recipe["href"] %>"</td>
-		<td><%= recipe["description"] %>"</td>
-		<td><%= link_to "visit recipe website", recipe["href"] %></td>
+		<td><%= link_to img(recipe["thumbnail"]), recipe.href %>"</td>
+		<td><%= link_to recipe.title, recipe.href %></td>
+		<td><%= recipe.description %></td>
+		<td><%= link_to "visit recipe website", recipe.href %></td>
 	</tr>
 	<% end %>
 </table>
