@@ -9,7 +9,7 @@ class Recipe
 	# @recipe = nil
 
 	def self.for(term)
-		response = get("http://www.recipepuppy.com/api", query: {q: "#{URI.encode(term)}"})
+		response = get("http://www.recipepuppy.com/api", query: {q: term})
 	end
 
 end 
